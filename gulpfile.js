@@ -6,7 +6,7 @@ const cleanCSS = require('gulp-clean-css');
 function scss() {
     return src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest('./dist'));
+        .pipe(dest('./'));
 }
 
 function watchStyles() {

@@ -1,8 +1,5 @@
 footer {
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
 
 #footer-menu {
@@ -28,6 +25,32 @@ footer {
                 text-decoration: underline;
             }
         }
+    }
+}
+
+.footer-info {
+    @include flexbox();
+    background: #225b7b;
+    color: $color-gold;
+
+    &-left {
+        button {
+            background: #2c3c4c;
+
+            &:nth-child(1) {
+                margin-right: 32px;
+            }
+        }
+    }
+
+    &-left, &-center, &-right {
+        width: 33%;
+        @include flex-grow(1);
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-items(center);
     }
 }
 

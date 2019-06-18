@@ -37,11 +37,13 @@
 				</div>
 			</div><!-- .site-branding -->
 			<nav id="site-navigation" class="main-navigation">
-				<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
+				<div class="menu-toggle-container">
+					<button class="menu-toggle hamburger hamburger--spring" type="button" aria-controls="primary-menu" aria-expanded="false">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button> <!-- .menu-toggle -->
+				</div> <!-- .menu-toggle-container -->
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',

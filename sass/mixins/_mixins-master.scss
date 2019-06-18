@@ -1,4 +1,5 @@
 @import 'flexbox';
+@import 'media-queries';
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
