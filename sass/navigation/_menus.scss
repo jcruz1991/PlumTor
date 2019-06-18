@@ -1,8 +1,44 @@
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: $color-header;
+}
+
+.cta-wrapper {
+	margin-top: 16px;
+	.cta-button {
+		float: right;
+		background: $color-gold;
+		color: #005A84;
+		letter-spacing: 0.5;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 700;
+		border: none;
+		transition: all ease-out 0.4s;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+
 .main-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
+
+	.menu-primary-container {
+		width: 100%;
+		height: auto;
+		@include flexbox();
+		@include justify-content(center);
+		background: #005c7e;
+		margin-bottom: 12px;
+	}
 
 	ul {
 		display: none;
@@ -24,8 +60,9 @@
 			}
 
 			li {
-				&:hover > ul,
-				&.focus > ul {
+
+				&:hover>ul,
+				&.focus>ul {
 					left: 100%;
 				}
 			}
@@ -34,17 +71,15 @@
 				width: 200px;
 			}
 
-			:hover > a,
-			.focus > a {
-			}
+			:hover>a,
+			.focus>a {}
 
 			a:hover,
-			a.focus {
-			}
+			a.focus {}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
+		li:hover>ul,
+		li.focus>ul {
 			left: auto;
 		}
 	}
@@ -52,34 +87,87 @@
 	li {
 		float: left;
 		position: relative;
+		padding: 12px 15px;
+		margin-right: 26px;
 
-		&:hover > a,
-		&.focus > a {
+		&:last-child {
+			margin-right: 0;
 		}
+
+		&:hover>a,
+		&.focus>a {}
 	}
 
 	a {
+		font-size: 18px;
 		display: block;
 		text-decoration: none;
+		color: $color-gold;
+		text-shadow: -1px 2px 4px rgba(0, 0, 0, .5);
+		letter-spacing: 1px;
+		transition: color ease-out 0.3s;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 700;
+
+		&:hover {
+			text-decoration: none;
+			color: white;
+		}
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+	.current_page_item>a,
+	.current-menu-item>a,
+	.current_page_ancestor>a,
+	.current-menu-ancestor>a {}
 }
 
 /* Small menu. */
+
+.menu-toggle {
+	span {
+		width: 30px;
+		height: 4px;
+		margin-top: 4px;
+		display: block;
+		background-color: $color-gold;
+		transition: all ease-out .4s;
+	}
+
+	&[aria-expanded=true] {
+		span {
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				position: relative;
+			}
+
+			&:nth-child(1) {
+				transform: rotateY(45deg);
+			}
+
+			&:nth-child(2) {
+				display: none;
+			}
+
+			&:nth-child(3) {
+				transform: rotateY(-45deg);
+			}
+		}
+	}
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
 }
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
 	}
+
 	.main-navigation ul {
 		display: block;
 	}

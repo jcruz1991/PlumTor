@@ -121,18 +121,20 @@ add_action( 'widgets_init', 'plumtor_widgets_init' );
  * Enqueue scripts and styles.
  */
 function plumtor_scripts() {
-	wp_enqueue_style( 'plumtor-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'plumtor-style', get_template_directory_uri() . '/style.css' );
 
 	// Bootstrap CSS
-	wp_enqueue_style( 'plumtor-bootstrap', get_stylesheet_uri() . '/css/bootstrap.min.js' );
-	
+	wp_enqueue_style( 'plumtor-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
 
+	// Google Font
+	wp_enqueue_style('plumtor-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Pacifico&display=swap');
+	
 	wp_enqueue_script( 'plumtor-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'plumtor-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// Boostrap JS
-	wp_enqueue_script( 'plumtor-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), 20151215, true );
+	wp_enqueue_script( 'plumtor-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), 20151215, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

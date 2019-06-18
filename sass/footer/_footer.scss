@@ -1,0 +1,41 @@
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#footer-menu {
+    background: #ae3330;
+    margin: 0;
+    border: 0;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    width: 100%;
+    padding: 19px 0;
+    list-style: none;
+
+    li {
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Pacifico', cursive;
+            font-size: 18px;
+            margin-right: 32px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.site-info {
+    background: #4e4e4e;
+    color: #a2a2a2;
+    font-size: 12px;
+    padding: 12px 0;
+    @include flexbox();
+    @include justify-content(center);
+}

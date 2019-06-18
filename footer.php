@@ -14,6 +14,12 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<div class="footer-nav">
+			<?php wp_nav_menu( array(
+					'theme_location' => 'footer',
+					'menu_id'        => 'footer-menu',
+				) ); ?>
+		</div>
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'plumtor' ) ); ?>">
 				<?php
