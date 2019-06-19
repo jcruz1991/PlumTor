@@ -33,6 +33,7 @@
 	button.onclick = function() {
 
 		button.classList.toggle('is-active');
+		document.body.classList.toggle('overflow-hidden');
 		
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
