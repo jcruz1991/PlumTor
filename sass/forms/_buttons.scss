@@ -1,7 +1,9 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.wpforms-submit,
+button[name="wpforms[submit]"] {
 	background: $color__background-button;
 	color: white;
 	display: inline-block;

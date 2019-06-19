@@ -1,13 +1,13 @@
 footer {
     width: 100%;
+    display: none;
 }
 
 #footer-menu {
-    background: #ae3330;
     margin: 0;
     border: 0;
     @include flexbox();
-    @include flex-direction(row);
+    @include flex-direction(column);
     @include justify-content(center);
     width: 100%;
     padding: 19px 0;
@@ -15,14 +15,12 @@ footer {
 
     li {
         a {
-            color: white;
             text-decoration: none;
-            font-family: 'Pacifico', cursive;
-            font-size: 18px;
             margin-right: 32px;
 
             &:hover {
-                text-decoration: underline;
+                text-decoration: none;
+                color: #cecece;
             }
         }
     }
@@ -30,35 +28,54 @@ footer {
 
 .footer-info {
     @include flexbox();
-    background: #225b7b;
-    color: $color-gold;
+    background: #042e3e;
 
-    &-left {
-        button {
-            background: #2c3c4c;
-
-            &:nth-child(1) {
-                margin-right: 32px;
-            }
-        }
+    h5 {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 1.8em;
     }
 
-    &-left, &-center, &-right {
-        width: 33%;
-        @include flex-grow(1);
-        @include flexbox();
-        @include flex-direction(row);
-        @include flex-wrap(wrap);
-        @include justify-content(center);
-        @include align-items(center);
+    p,
+    a {
+        color: #cecece;
     }
 }
 
 .site-info {
-    background: #4e4e4e;
-    color: #a2a2a2;
-    font-size: 12px;
-    padding: 12px 0;
-    @include flexbox();
-    @include justify-content(center);
+    background: white;
+
+    .container {
+        color: #a2a2a2;
+        font-size: 16px;
+        padding: 22px 0;
+        @include flexbox();
+        @include justify-content(flex-end);
+        @include align-items(center);
+
+        @include for-phone-only {
+            @include justify-content(center);
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+#footer-widget {
+    form {
+        button {
+            float: right;
+            background: darken(#042e3d, 2);
+            border: none;
+            color: white;
+            width: 180px;
+            transition: all ease-out 0.3s;
+
+            &:hover {
+                background: darken(#042e3d, 3);
+            }
+        }
+    }
 }

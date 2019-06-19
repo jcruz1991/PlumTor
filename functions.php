@@ -144,7 +144,10 @@ function plumtor_scripts() {
 	wp_enqueue_script( 'plumtor-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	// Boostrap JS
-	wp_enqueue_script( 'plumtor-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), 20151215, true );
+	wp_enqueue_script( 'plumtor-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20151215', true );
+
+	// FontAwesome Kit
+	wp_enqueue_script( 'plumtor-fontawesome', 'https://kit.fontawesome.com/1c7085ef01.js', array(), '20151215', false);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

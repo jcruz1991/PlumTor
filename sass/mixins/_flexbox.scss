@@ -12,6 +12,14 @@
   display: flex;
 }
 
+@mixin inline-flexbox() {
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
 // The 'flex' shorthand
 // - applies to: flex items
 // <positive-number>, initial, auto, or none
