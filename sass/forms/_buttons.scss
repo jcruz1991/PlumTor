@@ -4,19 +4,19 @@ input[type="reset"],
 input[type="submit"],
 .wpforms-submit,
 button[name="wpforms[submit]"] {
-	background: $color__background-button;
-	color: white;
 	display: inline-block;
-	border: 1px solid rgba(0,0,0,0.21);
-    border-bottom: 4px solid rgba(0,0,0,0.21);
-    border-radius: 4px;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
-	@include font-size(0.75);
+	background: #032733;
+	border: none;
+	color: white;
+	min-width: 180px;
+	transition: all ease-out 0.3s;
+	font-size: 1em;
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: 10px 15px;
 
-	&:hover {
-		
+	&:hover,
+	&:focus {
+		background: darken(#032733, 2);
 	}
 
 	&:active,

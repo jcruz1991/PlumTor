@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 	<div id="page" class="site">
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'plumtor'); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', '_s'); ?></a>
 
 		<header id="masthead" class="site-header">
 			<div id="topbar" class="clearfix">
@@ -50,39 +50,40 @@
 					</div>
 				</div>
 			</div> <!-- #topbar -->
-			<div id="navigation-wrapper">
-				<div class="container h-100">
-					<div class="row h-100">
-						<div class="col-sm-12">
-							<div class="site-branding">
-								<div class="logo-wrapper">
-									<?php
-									if (the_custom_logo()) : the_custom_logo();
-									else :	?>
-										<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-									<?php endif; ?>
-								</div> <!-- .logo-wrapper -->
-							</div><!-- .site-branding -->
-							<nav id="site-navigation" class="main-navigation">
-								<div class="menu-toggle-container">
-									<button class="menu-toggle hamburger hamburger--spring" type="button" aria-controls="primary-menu" aria-expanded="false">
-										<span class="hamburger-box">
-											<span class="hamburger-inner"></span>
-										</span>
-									</button> <!-- .menu-toggle -->
-								</div> <!-- .menu-toggle-container -->
-								<?php
-								wp_nav_menu(array(
-									'theme_location' => 'primary',
-									'menu_id'        => 'primary-menu',
-								));
-								?>
-							</nav><!-- #site-navigation -->
+			<div class="navigation-wrapper">
+				<div class="site-branding">
+					<div class="container h-100">
+						<?php
+						the_custom_logo();
+						if (is_front_page() && is_home()) :
+							?>
+							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+						<?php
+					else :
+						?>
+							<p class="site-title h-100"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
+						<?php
+					endif; ?>
+					</div> <!-- .container -->
+				</div><!-- .site-branding -->
+				<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<div class="container">
+						<div class="icon-wrapper">
+							<div class="line"></div>
+							<div class="line"></div>
+							<div class="line"></div>
 						</div>
-					</div><!-- .row -->
-
-				</div> <!-- .container -->
-			</div> <!-- $navigation-wrapper -->
+					</div> <!-- .container -->
+				</div> <!-- .menu-toggle -->
+				<nav id="site-navigation" class="main-navigation">
+					<?php
+					wp_nav_menu(array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					));
+					?>
+				</nav><!-- #site-navigation -->
+			</div> <!-- .navigation-wrapper -->
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
