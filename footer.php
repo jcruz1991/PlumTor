@@ -38,10 +38,34 @@
 				</div>
 				<div class="col-md-3 col-sm-12">
 					<h5>Services</h5>
-					<?php wp_nav_menu(array(
-						'theme_location' => 'footer',
-						'menu_id'        => 'footer-menu',
-					)); ?>
+					<?php
+					// WP_Query arguments
+					$args = array(
+						'post_type'              => array('services'),
+						'post_status'            => array('publish'),
+						'nopaging'               => true,
+						'order'                  => 'ASC',
+						'orderby'                => 'menu_order',
+					);
+					// The Query
+					$services = new WP_Query($args);
+					?>
+					<ul class="services-list">
+						<?php
+						// The Loop
+						if ($services->have_posts()) : while ($services->have_posts()) :
+								$services->the_post();
+								?>
+								<li>
+									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+								</li>
+							<?php
+						endwhile;
+					endif;
+					// Restore original Post Data
+					wp_reset_postdata();
+					?>
+					</ul>
 				</div>
 				<div class="col-md-3 col-sm-12">
 					<h5>Contact Us</h5>

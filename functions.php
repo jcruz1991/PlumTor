@@ -135,10 +135,12 @@ add_action('widgets_init', 'plumtor_widgets_init');
  */
 function plumtor_scripts()
 {
-	wp_enqueue_style('plumtor-style', get_template_directory_uri() . '/style.css');
+	wp_register_style('plumtor-style', get_template_directory_uri() . '/style.css');
 
 	// Bootstrap CSS
-	wp_enqueue_style('plumtor-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style('plumtor-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array('plumtor-style'));
+
+	wp_enqueue_style('plumtor-style');
 
 	// Google Font
 	wp_enqueue_style('plumtor-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Pacifico&display=swap');

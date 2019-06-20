@@ -3,7 +3,7 @@ footer {
     display: none;
 }
 
-#footer-menu {
+#footer-menu, .services-list {
     margin: 0;
     border: 0;
     @include flexbox();
