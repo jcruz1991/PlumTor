@@ -13,14 +13,22 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
-	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
-	padding: 3px;
+textarea,
+div.wpforms-container-full .wpforms-form input[type=text],
+div.wpforms-container-full .wpforms-form input[type=email],
+div.wpforms-container-full .wpforms-form textarea {
+	color: black;
+	border: none;
+	border-radius: 0px;
+	background: #e9f3f5;
+    border: none;
+    padding: 24px 12px;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 
 	&:focus {
-		color: $color__text-input-focus;
+		border: none;
 	}
 }
 

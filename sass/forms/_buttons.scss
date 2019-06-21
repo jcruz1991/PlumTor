@@ -3,10 +3,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .wpforms-submit,
+div.wpforms-container-full .wpforms-form button[type=submit],
 button[name="wpforms[submit]"] {
 	display: inline-block;
 	background: #032733;
-	border: none;
+	border: none !important;
 	color: white;
 	min-width: 180px;
 	transition: all ease-out 0.3s;
@@ -16,7 +17,7 @@ button[name="wpforms[submit]"] {
 
 	&:hover,
 	&:focus {
-		background: darken(#032733, 2);
+		background: #e61c39;
 	}
 
 	&:active,

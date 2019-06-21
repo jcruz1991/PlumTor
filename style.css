@@ -472,10 +472,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .wpforms-submit,
+div.wpforms-container-full .wpforms-form button[type=submit],
 button[name="wpforms[submit]"] {
   display: inline-block;
   background: #032733;
-  border: none;
+  border: none !important;
   color: white;
   min-width: 180px;
   transition: all ease-out 0.3s;
@@ -491,9 +492,11 @@ button[name="wpforms[submit]"] {
   input[type="submit"]:focus,
   .wpforms-submit:hover,
   .wpforms-submit:focus,
+  div.wpforms-container-full .wpforms-form button[type=submit]:hover,
+  div.wpforms-container-full .wpforms-form button[type=submit]:focus,
   button[name="wpforms[submit]"]:hover,
   button[name="wpforms[submit]"]:focus {
-    background: #022029; }
+    background: #e61c39; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -503,6 +506,8 @@ button[name="wpforms[submit]"] {
   input[type="submit"]:focus,
   .wpforms-submit:active,
   .wpforms-submit:focus,
+  div.wpforms-container-full .wpforms-form button[type=submit]:active,
+  div.wpforms-container-full .wpforms-form button[type=submit]:focus,
   button[name="wpforms[submit]"]:active,
   button[name="wpforms[submit]"]:focus {
     outline: none !important; }
@@ -525,11 +530,19 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
-  color: #666;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px; }
+textarea,
+div.wpforms-container-full .wpforms-form input[type=text],
+div.wpforms-container-full .wpforms-form input[type=email],
+div.wpforms-container-full .wpforms-form textarea {
+  color: black;
+  border: none;
+  border-radius: 0px;
+  background: #e9f3f5;
+  border: none;
+  padding: 24px 12px;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0.5px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -545,8 +558,11 @@ textarea {
   input[type="datetime"]:focus,
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
-  textarea:focus {
-    color: #111; }
+  textarea:focus,
+  div.wpforms-container-full .wpforms-form input[type=text]:focus,
+  div.wpforms-container-full .wpforms-form input[type=email]:focus,
+  div.wpforms-container-full .wpforms-form textarea:focus {
+    border: none; }
 
 select {
   border: 1px solid #ccc; }
@@ -829,6 +845,14 @@ header {
   float: right;
   text-align: right;
   width: 50%; }
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+.entry-header {
+  padding: 24px 0;
+  background: #6b6a6a;
+  color: white; }
 
 /*--------------------------------------------------------------
 # Footer
