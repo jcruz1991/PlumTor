@@ -76,6 +76,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "pages/pages";
 
 /*--------------------------------------------------------------
+# Custom Services CSS for shortcodes
+--------------------------------------------------------------*/
+@import "services/services";
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 @import "footer/footer";

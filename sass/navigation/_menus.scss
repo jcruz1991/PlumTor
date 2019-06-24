@@ -275,13 +275,32 @@ header {
 				a {
 					top: 50%;
 					position: relative;
+					//display: inline-block;
 					transform: translate(0, -50%);
 
 					&:hover {
-						border-bottom: 2px solid red;
-						color: #0a0a0a;
+						//text-decoration: none;
 					}
 				}
+
+				&:after {
+					content: "";
+					display: block;
+					margin: auto;
+					height: 3px;
+					margin-top: 7px;
+					width: 0px;
+					background: transparent;
+					transition: width .5s ease, background-color .5s ease;
+				}
+
+				&:hover {
+					&:after {
+						width: 100%;
+						background: red;
+					}
+				}
+
 			}
 		}
 

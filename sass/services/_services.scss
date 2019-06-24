@@ -1,0 +1,17 @@
+.services-wrapper {
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+
+    .service-item {
+        position: relative;
+        display: inline-block;
+        padding: 12px 28px;
+        max-width: 324px;
+        height: auto;
+
+        h3 {
+            text-align: center;
+        }
+    }
+}

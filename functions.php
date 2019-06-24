@@ -199,13 +199,25 @@ function plumtor_custom_post_type()
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array('title', 'editor')
+		'supports'           => array('title', 'editor', 'thumbnail', 'excerpt')
 	);
 
 	register_post_type('services', $args);
 }
 
-add_action( 'init', 'plumtor_custom_post_type' );
+add_action('init', 'plumtor_custom_post_type');
+
+/**
+ * Custom Shortcode for displaying services
+ */
+
+function services_shortcode($atts)
+{
+	ob_start();
+	require get_template_directory() . '/inc/services-shortcode.php';
+	return ob_get_clean();
+}
+add_shortcode('serviceslist', 'services_shortcode');
 
 
 /**
