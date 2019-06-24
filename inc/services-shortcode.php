@@ -28,7 +28,7 @@ $services = new WP_Query($args);
                     <?php if (the_excerpt()) {
                         the_excerpt();
                     } ?>
-                    <div class="text-left">
+                    <div class="text-sm-center text-md-left">
                         <a href="<?php the_permalink(); ?>">
                             <button>Learn More</button>
                         </a>
