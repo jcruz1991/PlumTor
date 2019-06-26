@@ -1,0 +1,18 @@
+.contact-shortcode-wrapper {
+    .cta-contact {
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include align-items(center);
+        background: lighten(#042e3e, 1);
+        color: white;
+        padding: 30px 20px;
+
+        .cta-text {
+            p {
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+}

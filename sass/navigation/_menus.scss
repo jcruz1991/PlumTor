@@ -69,7 +69,13 @@ header {
 	@include flex-shrink(1);
 	@include flex-basis(0);
 
+	.h-100 {
+		width: 100%;
+		@include flexbox();
+	}
+
 	.site-title {
+		width: 100%;
 		position: relative;
 		margin: 0;
 
@@ -83,7 +89,7 @@ header {
 }
 
 .menu-toggle {
-	float: right;
+	display: inline-block;
 	margin-top: 11px;
 
 	.icon-wrapper {
@@ -139,6 +145,10 @@ header {
 		margin: 0;
 		padding-left: 0;
 
+		.sub-menu {
+			padding-top: 32px;
+		}
+
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
@@ -146,6 +156,10 @@ header {
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
+			background: #042e3e;
+			@include flex-direction(column);
+			width: auto;
+			height: auto;
 
 			ul {
 				left: -999em;
@@ -153,7 +167,7 @@ header {
 			}
 
 			li {
-
+				padding: 5px 32px;
 				&:hover>ul,
 				&.focus>ul {
 					left: 100%;
@@ -162,6 +176,11 @@ header {
 
 			a {
 				width: 200px;
+				color: white;
+
+				&:hover {
+					color: white;
+				}
 			}
 
 			:hover>a,
@@ -261,6 +280,7 @@ header {
 		@include flex-shrink(1);
 		@include flex-basis(0);
 		@include flexbox();
+		@include justify-content(flex-end);
 
 		.menu-primary-container {
 			height: 100%;
@@ -278,29 +298,24 @@ header {
 					//display: inline-block;
 					transform: translate(0, -50%);
 
-					&:hover {
-						//text-decoration: none;
-					}
-				}
-
-				&:after {
-					content: "";
-					display: block;
-					margin: auto;
-					height: 3px;
-					margin-top: 7px;
-					width: 0px;
-					background: transparent;
-					transition: width .5s ease, background-color .5s ease;
-				}
-
-				&:hover {
 					&:after {
-						width: 100%;
-						background: red;
+						content: "";
+						display: block;
+						margin: auto;
+						height: 3px;
+						margin-top: 1px;
+						width: 0px;
+						background: transparent;
+						transition: width .5s ease, background-color .5s ease;
+					}
+
+					&:hover {
+						&:after {
+							width: 100%;
+							background: red;
+						}
 					}
 				}
-
 			}
 		}
 
@@ -308,8 +323,7 @@ header {
 		.current-menu-item>a,
 		.current_page_ancestor>a,
 		.current-menu-ancestor>a {
-			border-bottom: 2px solid red;
-			color: #0a0a0a;
+			color: red;
 		}
 	}
 }

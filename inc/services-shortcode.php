@@ -10,7 +10,6 @@ $args = array(
 $services = new WP_Query($args);
 ?>
 <div id="services-shortcode" class="py-5">
-    <h2 class="text-center mb-5">We Provide Professional <span class="highlight">Residential</span> Plumbing Services</h2>
     <div class="services-wrapper">
         <?php
         // The Loop

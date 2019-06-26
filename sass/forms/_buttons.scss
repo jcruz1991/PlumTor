@@ -4,7 +4,8 @@ input[type="reset"],
 input[type="submit"],
 .wpforms-submit,
 div.wpforms-container-full .wpforms-form button[type=submit],
-button[name="wpforms[submit]"] {
+button[name="wpforms[submit]"],
+.wp-block-button__link {
 	display: inline-block;
 	background: #032733;
 	border: none !important;
@@ -23,6 +24,14 @@ button[name="wpforms[submit]"] {
 	&:active,
 	&:focus {
 		outline: none !important;
+	}
+}
+
+.wp-block-button__link {
+	background: #e61c39;
+
+	&:hover {
+		background: #032733;
 	}
 }
 

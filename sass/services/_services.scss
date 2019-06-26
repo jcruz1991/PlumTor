@@ -14,4 +14,8 @@
             text-align: center;
         }
     }
+
+    @include for-phone-only {
+        @include justify-content(center);
+    }
 }

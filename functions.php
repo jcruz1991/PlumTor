@@ -76,8 +76,6 @@ if (!function_exists('plumtor_setup')) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support('custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
 			'flex-width'  => true,
 			'flex-height' => true,
 		));
@@ -138,7 +136,7 @@ function plumtor_scripts()
 	wp_register_style('plumtor-style', get_template_directory_uri() . '/style.css');
 
 	// Bootstrap CSS
-	wp_enqueue_style('plumtor-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array('plumtor-style'));
+	wp_enqueue_style('plumtor-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 
 	wp_enqueue_style('plumtor-style');
 
@@ -218,6 +216,18 @@ function services_shortcode($atts)
 	return ob_get_clean();
 }
 add_shortcode('serviceslist', 'services_shortcode');
+
+/**
+ * Custom Shortcode for Call To Action
+ */
+function cta_shortcode($atts)
+{
+	ob_start();
+	require get_template_directory() . '/inc/contact-shortcode.php';
+	return ob_get_clean();
+}
+add_shortcode('calltoaction', 'cta_shortcode');
+
 
 
 /**

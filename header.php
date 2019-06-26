@@ -41,7 +41,7 @@
 						</div>
 						<div class="col-md-6 col-sm-12 text-md-right text-sm-center cta-quote-wrapper">
 							<span class="cta-quote">
-								<a href="#">
+								<a href="<?php echo esc_url(get_page_link(86)); ?>">
 									<i class="far fa-edit"></i>
 									Request a Quote
 								</a>
@@ -50,31 +50,28 @@
 					</div>
 				</div>
 			</div> <!-- #topbar -->
-			<div class="navigation-wrapper">
-				<div class="site-branding">
-					<div class="container h-100">
+			<div class="navigation-wrapper container">
+			<div class="menu-toggle align-middle" aria-controls="primary-menu" aria-expanded="false">
+					<div class="icon-wrapper">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>
+				</div> <!-- .menu-toggle -->
+				<div class="site-branding align-middle">
+					<div class="h-100">
 						<?php
-						the_custom_logo();
-						if (is_front_page() && is_home()) :
+						if (has_custom_logo()) :
+							$custom_logo_id = get_theme_mod('custom_logo');
+							$image = wp_get_attachment_image_src($custom_logo_id, 'full');
+							echo '<a href="' . esc_url(home_url('/')) . '"><img class="img-fluid header-logo" src="' . $image[0] . '" alt="' . get_bloginfo('name') . '"></a>';
+						else :
 							?>
 							<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-						<?php
-					else :
-						?>
-							<p class="site-title h-100"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
 						<?php
 					endif; ?>
 					</div> <!-- .container -->
 				</div><!-- .site-branding -->
-				<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
-					<div class="container">
-						<div class="icon-wrapper">
-							<div class="line"></div>
-							<div class="line"></div>
-							<div class="line"></div>
-						</div>
-					</div> <!-- .container -->
-				</div> <!-- .menu-toggle -->
 				<nav id="site-navigation" class="main-navigation">
 					<?php
 					wp_nav_menu(array(

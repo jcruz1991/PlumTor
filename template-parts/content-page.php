@@ -15,7 +15,7 @@
 			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 		</div>
 	</header><!-- .entry-header -->
-	<div class="container page-wrapper">
+	<div class="page-wrapper container">
 		<?php plumtor_post_thumbnail(); ?>
 
 		<div class="entry-content">

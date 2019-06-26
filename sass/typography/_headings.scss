@@ -1,12 +1,30 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	clear: both;
 	font-family: $font__header;
 	font-weight: 700 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	.highlight {
 		font-family: inherit;
 		color: red;
 	}
+}
+
+.custom-font-size-lg {
+	font-size: 3.5625em;
+}
+
+.custom-font-size-md {
+	font-size: 2em;
 }
