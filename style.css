@@ -696,21 +696,20 @@ header {
   -moz-flex-basis: 0;
   -ms-flex-basis: 0;
   flex-basis: 0; }
-  .site-branding .h-100 {
-    width: 100%;
+  .site-branding .site-title {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex; }
-  .site-branding .site-title {
-    width: 100%;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    height: 100%;
     position: relative;
     margin: 0; }
     .site-branding .site-title a {
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
       font-size: 32px; }
 
 .menu-toggle {

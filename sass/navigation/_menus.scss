@@ -69,20 +69,15 @@ header {
 	@include flex-shrink(1);
 	@include flex-basis(0);
 
-	.h-100 {
-		width: 100%;
-		@include flexbox();
-	}
 
 	.site-title {
-		width: 100%;
+		@include flexbox();
+		@include align-items(center);
+		height: 100%;
 		position: relative;
 		margin: 0;
 
 		a {
-			position: absolute;
-			top: 50%;
-			transform: translate(0, -50%);
 			font-size: 32px;
 		}
 	}
