@@ -16,20 +16,20 @@ get_header();
             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
         </div>
     </header><!-- .entry-header -->
-    <main id="main" class="site-main container">
+    <main id="main" class="site-main container mt-5">
         <div class="row">
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-7 col-sm-12">
                 <?php
                 if (have_posts()) :
                     the_post();
 
-                    the_post_thumbnail();
+                    the_post_thumbnail('large');
 
                     the_content();
                 endif;
                 ?>
             </div>
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-5 col-sm-12">
                 <?php get_sidebar(); ?>
             </div>
         </div>

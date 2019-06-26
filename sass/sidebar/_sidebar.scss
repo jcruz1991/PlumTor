@@ -1,0 +1,25 @@
+.widget-area {
+    .widget_nav_menu {
+        .menu-sidebar-menu-container {
+            ul {
+                li {
+                    padding: 12px 4px;
+                    border-bottom: 1px solid #efefef;
+                    text-transform: uppercase;
+
+                    &:first-child {
+                        border-top: 1px solid #efefef; 
+                    }
+
+                    a {
+                        color: #999;
+
+                        &:hover {
+                            color: darken(#999, 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

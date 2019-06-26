@@ -951,6 +951,20 @@ header {
   color: white; }
 
 /*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.widget-area .widget_nav_menu .menu-sidebar-menu-container ul li {
+  padding: 12px 4px;
+  border-bottom: 1px solid #efefef;
+  text-transform: uppercase; }
+  .widget-area .widget_nav_menu .menu-sidebar-menu-container ul li:first-child {
+    border-top: 1px solid #efefef; }
+  .widget-area .widget_nav_menu .menu-sidebar-menu-container ul li a {
+    color: #999; }
+    .widget-area .widget_nav_menu .menu-sidebar-menu-container ul li a:hover {
+      color: #949494; }
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 footer {
