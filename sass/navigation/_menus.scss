@@ -2,6 +2,7 @@ header {
 	position: relative;
 }
 
+
 #topbar {
 	background: #042e3e;
 	color: white;
@@ -62,6 +63,9 @@ header {
 	}
 }
 
+.navigation-wrapper {
+	height: 60px;
+}
 
 .site-branding {
 	display: inline-block;
@@ -84,8 +88,9 @@ header {
 }
 
 .menu-toggle {
-	display: inline-block;
-	margin-top: 11px;
+	display: inline-flex;
+	@include align-items(center);
+	margin-right: 12px;
 
 	.icon-wrapper {
 		position: relative;

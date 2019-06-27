@@ -12,6 +12,10 @@ footer {
     padding: 19px 0;
     list-style: none;
 
+    @include for-phone-only {
+        padding: 0;
+    }
+
     li {
         a {
             text-decoration: none;
@@ -33,11 +37,19 @@ footer {
         color: white;
         font-weight: bold;
         margin-bottom: 1.8em;
+
+        @include for-phone-only {
+            margin: 12px 0;
+        }
     }
 
     p,
     a {
         color: #cecece;
+        
+        @include for-phone-only {
+            line-height: 0;
+        }
     }
 }
 

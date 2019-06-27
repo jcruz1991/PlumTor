@@ -15,7 +15,7 @@
 			<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
 		</div>
 	</header><!-- .entry-header -->
-	<div class="page-wrapper">
+	<div class="page-wrapper container">
 		<?php has_post_thumbnail(); ?>
 
 		<div class="entry-content">

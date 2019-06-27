@@ -51,14 +51,17 @@
 				</div>
 			</div> <!-- #topbar -->
 			<div class="navigation-wrapper container">
-			<div class="menu-toggle align-middle" aria-controls="primary-menu" aria-expanded="false">
+
+				<div class="menu-toggle h-100" aria-controls="primary-menu" aria-expanded="false">
 					<div class="icon-wrapper">
 						<div class="line"></div>
 						<div class="line"></div>
 						<div class="line"></div>
 					</div>
 				</div> <!-- .menu-toggle -->
-				<div class="site-branding align-middle">
+
+
+				<div class="site-branding">
 					<div class="h-100">
 						<?php
 						if (has_custom_logo()) :

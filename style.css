@@ -685,6 +685,9 @@ header {
     #topbar .cta-quote i {
       margin-right: 6px; }
 
+.navigation-wrapper {
+  height: 60px; }
+
 .site-branding {
   display: inline-block;
   -webkit-flex-grow: 1;
@@ -716,8 +719,12 @@ header {
       font-size: 32px; }
 
 .menu-toggle {
-  display: inline-block;
-  margin-top: 11px; }
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin-right: 12px; }
   .menu-toggle .icon-wrapper {
     position: relative;
     width: 24px;
@@ -1014,6 +1021,9 @@ footer {
   width: 100%;
   padding: 19px 0;
   list-style: none; }
+  @media (max-width: 599px) {
+    #footer-menu, .services-list {
+      padding: 0; } }
   #footer-menu li a, .services-list li a {
     text-decoration: none;
     margin-right: 32px; }
@@ -1032,9 +1042,16 @@ footer {
     color: white;
     font-weight: bold;
     margin-bottom: 1.8em; }
+    @media (max-width: 599px) {
+      .footer-info h5 {
+        margin: 12px 0; } }
   .footer-info p,
   .footer-info a {
     color: #cecece; }
+    @media (max-width: 599px) {
+      .footer-info p,
+      .footer-info a {
+        line-height: 0; } }
 
 .site-info {
   background: white; }
