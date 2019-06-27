@@ -924,6 +924,28 @@ header {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Quotes Page Custom CSS
+--------------------------------------------------------------*/
+.quote-wrapper .wp-block-column:last-child {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  -ms-justify-content: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-pack: space-evenly; }
+
+/*--------------------------------------------------------------
+# Single Page for Services Custom Post Type
+--------------------------------------------------------------*/
 .post-navigation-wrapper {
   display: -webkit-box;
   display: -moz-box;
