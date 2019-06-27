@@ -482,6 +482,9 @@ p,
 span {
   font-family: "Open Sans Condensed", sans-serif; }
 
+p, span {
+  line-height: 32px; }
+
 table {
   margin: 0 0 1.5em;
   width: 100%; }
@@ -498,9 +501,10 @@ div.wpforms-container-full .wpforms-form button[type=submit],
 button[name="wpforms[submit]"],
 .wp-block-button__link {
   display: inline-block;
-  background: #032733;
+  background-color: transparent;
+  background: #032733 !important;
   border: none !important;
-  color: white;
+  color: white !important;
   min-width: 180px;
   transition: all ease-out 0.3s;
   font-size: 1em;
@@ -521,7 +525,7 @@ button[name="wpforms[submit]"],
   button[name="wpforms[submit]"]:focus,
   .wp-block-button__link:hover,
   .wp-block-button__link:focus {
-    background: #e61c39; }
+    background: #e61c39 !important; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -566,13 +570,12 @@ textarea,
 div.wpforms-container-full .wpforms-form input[type=text],
 div.wpforms-container-full .wpforms-form input[type=email],
 div.wpforms-container-full .wpforms-form textarea {
-  color: black;
-  border: none;
-  border-radius: 0px;
+  color: black !important;
+  border: none !important;
+  border-radius: 0px !important;
+  background-color: #e9f3f5 !important;
   background: #e9f3f5;
-  border: none;
-  padding: 24px 12px;
-  color: black;
+  padding: 24px 12px !important;
   font-weight: 700;
   letter-spacing: 0.5px; }
   input[type="text"]:focus,

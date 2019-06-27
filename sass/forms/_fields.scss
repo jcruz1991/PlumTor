@@ -17,13 +17,12 @@ textarea,
 div.wpforms-container-full .wpforms-form input[type=text],
 div.wpforms-container-full .wpforms-form input[type=email],
 div.wpforms-container-full .wpforms-form textarea {
-	color: black;
-	border: none;
-	border-radius: 0px;
+	color: black !important;
+	border: none !important;
+	border-radius: 0px !important;
+	background-color: #e9f3f5 !important;
 	background: #e9f3f5;
-	border: none;
-	padding: 24px 12px;
-	color: black;
+	padding: 24px 12px !important;
 	font-weight: 700;
 	letter-spacing: 0.5px;
 

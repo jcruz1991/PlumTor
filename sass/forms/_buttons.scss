@@ -7,9 +7,10 @@ div.wpforms-container-full .wpforms-form button[type=submit],
 button[name="wpforms[submit]"],
 .wp-block-button__link {
 	display: inline-block;
-	background: #032733;
+	background-color: transparent;
+	background: #032733 !important;
 	border: none !important;
-	color: white;
+	color: white !important;
 	min-width: 180px;
 	transition: all ease-out 0.3s;
 	font-size: 1em;
@@ -18,7 +19,7 @@ button[name="wpforms[submit]"],
 
 	&:hover,
 	&:focus {
-		background: #e61c39;
+		background: #e61c39 !important;
 	}
 
 	&:active,

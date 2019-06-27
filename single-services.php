@@ -24,10 +24,13 @@ get_header();
                     the_post();
 
                     the_post_thumbnail('large');
-
-                    the_content();
-                endif;
-                ?>
+                    ?>
+                    <div class="pt-5">
+                        <?php the_content(); ?>
+                    </div>
+                <?php
+            endif;
+            ?>
             </div>
             <div class="col-md-5 col-sm-12">
                 <?php get_sidebar(); ?>

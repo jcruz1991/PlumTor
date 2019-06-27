@@ -45,4 +45,8 @@ span {
 	font-family: $font__main;
 }
 
+p, span {
+	line-height: 32px;
+}
+
 @import "tables";
