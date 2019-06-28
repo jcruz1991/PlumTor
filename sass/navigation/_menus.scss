@@ -2,9 +2,30 @@ header {
 	position: relative;
 }
 
+#topBtn {
+	display: none;
+	width: 50px;
+	right: 30px;
+	bottom: 30px;
+	position: fixed;
+	height: 50px;
+	background: $color-red;
+	border-radius: 3px;
+	color: white;
+	z-index: 999;
+	cursor: pointer;
+
+	.icon-btn-wrapper {
+		height: 100%;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+	}
+}
+
 
 #topbar {
-	background: #042e3e;
+	background: $color-dark-blue-secondary;
 	color: white;
 	height: 43px;
 	width: 100%;
@@ -145,21 +166,16 @@ header {
 		margin: 0;
 		padding-left: 0;
 
-		.sub-menu {
-			padding-top: 32px;
-		}
-
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
-			top: 100%;
-			left: -999em;
+			//top: 61px;
+			left: 0;
 			z-index: 99999;
-			background: #042e3e;
-			@include flex-direction(column);
-			width: auto;
-			height: auto;
+			width: 100%;
+			background: $color-dark-blue-secondary;
+			display: none;
 
 			ul {
 				left: -999em;
@@ -168,6 +184,7 @@ header {
 
 			li {
 				padding: 5px 32px;
+
 				&:hover>ul,
 				&.focus>ul {
 					left: 100%;
@@ -184,12 +201,16 @@ header {
 			}
 
 			:hover>a,
-			.focus>a {}
+			.focus>a {
+			}
 		}
 
 		li:hover>ul,
 		li.focus>ul {
-			left: auto;
+			//left: auto;
+			display: block;
+			width: auto;
+			height: auto;
 		}
 	}
 
@@ -218,7 +239,7 @@ header {
 	.current_page_ancestor>a,
 	.current-menu-ancestor>a {
 		border-bottom: none;
-		color: red;
+		color: $color-red;
 	}
 }
 
@@ -312,7 +333,7 @@ header {
 					&:hover {
 						&:after {
 							width: 100%;
-							background: red;
+							background: $color-red;
 						}
 					}
 				}
@@ -323,7 +344,7 @@ header {
 		.current-menu-item>a,
 		.current_page_ancestor>a,
 		.current-menu-ancestor>a {
-			color: red;
+			color: $color-red;
 		}
 	}
 }

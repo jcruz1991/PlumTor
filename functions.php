@@ -148,6 +148,9 @@ function plumtor_scripts()
 	wp_enqueue_script('plumtor-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
 
 	// Boostrap JS
+	wp_enqueue_script('scroll-to-top-js', get_template_directory_uri() . '/js/scollToTop.js', array('jquery'), '20151215', true);
+
+	// Boostrap JS
 	wp_enqueue_script('plumtor-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20151215', true);
 
 	// FontAwesome Kit

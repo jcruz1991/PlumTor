@@ -31,7 +31,7 @@ footer {
 
 .footer-info {
     @include flexbox();
-    background: #042e3e;
+    background: $color-dark-blue-secondary;
 
     h5 {
         color: white;
@@ -78,14 +78,14 @@ footer {
     form {
         button {
             float: right;
-            background: darken(#042e3d, 2);
+            background: darken($color-dark-blue, 2);
             border: none;
             color: white;
             width: 180px;
             transition: all ease-out 0.3s;
 
             &:hover {
-                background: darken(#042e3d, 3);
+                background: darken($color-dark-blue, 3);
             }
         }
     }

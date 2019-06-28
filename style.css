@@ -375,7 +375,7 @@ h4 .highlight,
 h5 .highlight,
 h6 .highlight {
   font-family: inherit;
-  color: red; }
+  color: #e61c39; }
 
 .custom-font-size-lg {
   font-size: 3.5625em; }
@@ -633,6 +633,35 @@ a {
 header {
   position: relative; }
 
+#topBtn {
+  display: none;
+  width: 50px;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  height: 50px;
+  background: #e61c39;
+  border-radius: 3px;
+  color: white;
+  z-index: 999;
+  cursor: pointer; }
+  #topBtn .icon-btn-wrapper {
+    height: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+
 #topbar {
   background: #042e3e;
   color: white;
@@ -761,22 +790,15 @@ header {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul .sub-menu {
-      padding-top: 32px; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
-      top: 100%;
-      left: -999em;
+      left: 0;
       z-index: 99999;
+      width: 100%;
       background: #042e3e;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      width: auto;
-      height: auto; }
+      display: none; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
@@ -792,7 +814,9 @@ header {
           color: white; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
-      left: auto; }
+      display: block;
+      width: auto;
+      height: auto; }
   .main-navigation li {
     position: relative;
     padding: 0 15px; }
@@ -811,7 +835,7 @@ header {
   .main-navigation .current_page_ancestor > a,
   .main-navigation .current-menu-ancestor > a {
     border-bottom: none;
-    color: red; }
+    color: #e61c39; }
 
 /* Small menu. */
 .main-navigation.toggled {
@@ -902,12 +926,12 @@ header {
           transition: width .5s ease, background-color .5s ease; }
         .main-navigation ul li a:hover:after {
           width: 100%;
-          background: red; }
+          background: #e61c39; }
     .main-navigation .current_page_item > a,
     .main-navigation .current-menu-item > a,
     .main-navigation .current_page_ancestor > a,
     .main-navigation .current-menu-ancestor > a {
-      color: red; } }
+      color: #e61c39; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main

@@ -22,6 +22,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="topBtn">
+		<div class="icon-btn-wrapper">
+			<i class="fas fa-chevron-up"></i>
+		</div> <!-- .icon-btn-wrapper -->
+	</div> <!-- #topBtn -->
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', '_s'); ?></a>
 
@@ -85,5 +90,6 @@
 				</nav><!-- #site-navigation -->
 			</div> <!-- .navigation-wrapper -->
 		</header><!-- #masthead -->
+
 
 		<div id="content" class="site-content">
