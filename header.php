@@ -37,7 +37,7 @@
 						<div class="col-md-6 col-sm-12 text-md-left text-sm-center cta-contact-wrapper">
 							<span>
 								<i class="fas fa-phone-alt"></i>
-								Call Us: (714) 999-9999
+								Call Us: (714) 651-7244
 							</span>
 							<span>
 								<i class="far fa-clock"></i>
